@@ -1,0 +1,40 @@
+.MMM-doorbird {
+  position: relative;
+}
+
+.MMM-doorbird video {
+  width: 100%;
+  height: auto;
+}
+
+.MMM-doorbird .button-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.MMM-doorbird .button {
+  background-color: #f1f1f1;
+  border: none;
+  color: black;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 10px 24px;
+}
+
+.MMM-doorbird .button.green {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.MMM-doorbird .button.red {
+  background-color: #f44336;
+  color: white;
+}

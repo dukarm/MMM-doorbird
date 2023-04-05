@@ -1,0 +1,25 @@
+{
+  "name": "MMM-doorbird",
+  "version": "1.0.0",
+  "description": "A MagicMirror module for Doorbird D1101V-S",
+  "main": "MMM-doorbird.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dukarm/MMM-doorbird.git"
+  },
+  "keywords": [
+    "MagicMirror",
+    "Doorbird",
+    "Video"
+  ],
+  "author": "DUDEK Armel",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  }
+}
+
