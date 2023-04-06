@@ -1,45 +1,83 @@
 # MMM-doorbird
 
-A MagicMirror² module for integrating with Doorbird D1101V-S.
+`MMM-doorbird` is a module for the [MagicMirror²](https://github.com/MichMich/MagicMirror) project by [DukArm](http://michaelteeuw.nl/dukarm/magicmirror). This module allows you to integrate your [DoorBird](https://www.doorbird.com/) video doorbell into your MagicMirror² setup, displaying live video feed and notifications from your DoorBird device.
+
+![MMM-doorbird screenshot](screenshot.png)
+
+## Table of Contents
+
+1. [Installation](#installation)
+2. [Configuration](#configuration)
+3. [Customization](#customization)
+4. [Troubleshooting](#troubleshooting)
+5. [License](#license)
 
 ## Installation
 
-1. Navigate to the `modules` folder of your MagicMirror² installation.
-2. Clone this repository: `git clone https://github.com/dukarm/MMM-doorbird.git`.
-3. Install the dependencies: `cd MMM-doorbird && npm install`.
-4. Add the `MMM-doorbird` module to your `config.js` file.
+To install the `MMM-doorbird` module, follow these steps:
+
+1. Navigate to the `modules` folder of your MagicMirror² installation:
+
+  `cd ~/MagicMirror/modules`
+  
+2. Clone the `MMM-doorbird` repository:
+
+  `git clone https://github.com/dukarm/MMM-doorbird.git`
+
+3. Install the required dependencies:
+
+   `cd MMM-doorbird
+   npm install`
+
+4. Add the `MMM-doorbird` module to your `config.js` file (see [Configuration](#configuration) below for details).
 
 ## Configuration
 
-Add the following configuration to your `config.js` file:
+To configure the `MMM-doorbird` module, add the following configuration block to the `modules` array in your `config.js` file:
 
-```javascript
+```
 {
-  module: "MMM-doorbird",
-  position: "bottom_right",
-  config: {
-    doorbirdUrl: "http://192.168.1.100", // Replace with your Doorbird's IP address
-    doorbirdUsername: "doorbirdUsername", // Replace with your Doorbird username
-    doorbirdPassword: "doorbirdPassword", // Replace with your Doorbird password
-    magicMirrorIP: "192.168.1.200", // Replace with your MagicMirror's IP address
-    magicMirrorPort: "8080", // Replace with your MagicMirror's port
-    displayDuration: 40 * 1000,
-    width: 640,
-    height: 480
-  }
+module: "MMM-doorbird",
+position: "middle_center", // Change this to any valid MagicMirror² position
+config: {
+ doorbirdHost: "DOORBIRD_IP_ADDRESS",
+ doorbirdUser: "DOORBIRD_USERNAME",
+ doorbirdPassword: "DOORBIRD_PASSWORD",
+ // Additional configuration options go here
 }
+},
+```
 
-## Usage
+Replace DOORBIRD_IP_ADDRESS, DOORBIRD_USERNAME, and DOORBIRD_PASSWORD with the corresponding values for your DoorBird device.
 
-When someone rings the bell on your Doorbird D1101V-S, the video feed will be displayed on your MagicMirror² for 40 seconds (or the duration configured in `displayDuration`). There will be two buttons below the video feed:
+### Configuration Options
 
-1. A green phone button 📞: Press this button to start two-way audio communication through your MagicMirror's microphone. The button will turn red, and pressing it again will end the audio communication.
-2. A door unlock button 🔓: Press this button to activate the electric door opener connected to your Doorbird device.
+| Option                | Description                                                                                                    | Default       |
+|-----------------------|----------------------------------------------------------------------------------------------------------------|---------------|
+| doorbirdUrl           | The http URL of your DoorBird device.                                                                          | *Required*    |
+| doorbirdHost          | The IP address or hostname of your DoorBird device.                                                            | *Required*    |
+| doorbirdUser          | The username for accessing your DoorBird device.                                                               | *Required*    |
+| doorbirdPassword      | The password for accessing your DoorBird device.                                                               | *Required*    |
+| notificationTimeout   | The duration (in milliseconds) for which the notification will be displayed after an event is detected.        | 40000         |
+| moduleIP              | The IP address or hostname of the module for receive notification from Dorrbird                                | *Required*    |
+| modulePort            | Listen port of the module for receive notification from Dorrbird                                               | 8090          |
+| width                 | The width (in pixels) of the live video feed.                                                                  | 640           |
+| height                | The height (in pixels) of the live video feed.                                                                 | 480           |
+| doorbirdRelay         | The height (in pixels) of the live video feed.                                                                 | 1             |
 
-## Contributing
+## Customization
 
-Feel free to contribute to this project by submitting pull requests or opening issues on the repository.
+To customize the appearance of the MMM-doorbird module, you can modify the MMM-doorbird.css file located in the MMM-doorbird folder.
+
+## Troubleshooting
+
+If you encounter any issues while using the MMM-doorbird module, please check the following:
+
+1. Ensure that your DoorBird device is properly set up and connected to your network.
+2. Verify that the configuration in your config.js file is correct, including the DoorBird device's IP address, username, and password.
+3. Check the MagicMirror² logs for any error messages related to the MMM-doorbird module.
+4. If you still have issues, please create an issue on the MMM-doorbird GitHub repository (https://github.com/dukarm/MMM-doorbird/issues) with a detailed description of the problem, and we'll do our best to help you resolve it.
 
 ## License
 
-This project is licensed under the MIT License.
+MMM-doorbird is licensed under the MIT License. You are free to use, modify, and distribute this software, as long as the copyright notice and permission notice are included in all copies or substantial portions of the software.
