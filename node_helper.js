@@ -64,7 +64,7 @@ module.exports = NodeHelper.create({
 
   setupDoorbirdEvents: function () {
     // Configure Doorbird to notify when someone rings the bell
-    const url = `${this.config.doorbirdUrl}/bha-api/notification.cgi?url=http://${this.config.magicMirrorIP}:${this.config.modulePort}/doorbell&event=doorbell&subscribe=1`;
+    const url = `${this.config.doorbirdUrl}/bha-api/notification.cgi?url=http://${this.config.moduleIP}:${this.config.modulePort}/doorbell&event=doorbell&subscribe=1`;
     const options = {
       uri: url,
       auth: {

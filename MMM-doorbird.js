@@ -6,9 +6,8 @@ Module.register("MMM-doorbird", {
     doorbirdUsername: "",
     doorbirdPassword: "",
     doorbirdRelay: "1",
-    magicMirrorIP: "",
-    magicMirrorPort: "",
-    modulePort: "",
+    moduleIP: "localhost",
+    modulePort: "8090",
     displayDuration: 40 * 1000,
     width: 640,
     height: 480
