@@ -27,7 +27,7 @@ Module.register("MMM-doorbird", {
     const wrapper = document.createElement("div");
     wrapper.className = "video-container";
 
-      if (this.config.doorbirdUrl && this.config.doorbirdHost && this.config.doorbirdUsername && this.config.doorbirdPassword && this.config.magicMirrorIP && this.config.magicMirrorPort && this.config.modulePort) {
+      if (this.config.doorbirdUrl && this.config.doorbirdHost && this.config.doorbirdUsername && this.config.doorbirdPassword && this.config.moduleIP && this.config.modulePort) {
        this.container = wrapper;
 
        var buttonContainer = document.createElement("div");
