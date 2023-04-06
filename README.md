@@ -61,8 +61,8 @@ Replace DOORBIRD_IP_ADDRESS, DOORBIRD_USERNAME, and DOORBIRD_PASSWORD with the c
 | notificationTimeout   | The duration (in milliseconds) for which the notification will be displayed after an event is detected.        | 40000         |
 | moduleIP              | The IP address or hostname of the module for receive notification from Dorrbird                                | *Required*    |
 | modulePort            | Listen port of the module for receive notification from Dorrbird                                               | 8090          |
-| Width                 | The width (in pixels) of the live video feed.                                                                  | 640           |
-| Height                | The height (in pixels) of the live video feed.                                                                 | 480           |
+| width                 | The width (in pixels) of the live video feed.                                                                  | 640           |
+| height                | The height (in pixels) of the live video feed.                                                                 | 480           |
 | doorbirdRelay         | The height (in pixels) of the live video feed.                                                                 | 1             |
 
 ## Customization
