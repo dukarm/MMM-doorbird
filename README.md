@@ -35,7 +35,7 @@ To install the `MMM-doorbird` module, follow these steps:
 
 To configure the `MMM-doorbird` module, add the following configuration block to the `modules` array in your `config.js` file:
 
-```javascript
+```
 {
 module: "MMM-doorbird",
 position: "middle_center", // Change this to any valid MagicMirror² position
@@ -46,6 +46,7 @@ config: {
  // Additional configuration options go here
 }
 },
+```
 
 Replace DOORBIRD_IP_ADDRESS, DOORBIRD_USERNAME, and DOORBIRD_PASSWORD with the corresponding values for your DoorBird device.
 
