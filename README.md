@@ -63,7 +63,7 @@ Replace DOORBIRD_IP_ADDRESS, DOORBIRD_USERNAME, and DOORBIRD_PASSWORD with the c
 | modulePort            | Listen port of the module for receive notification from Dorrbird                                               | 8090          |
 | width                 | The width (in pixels) of the live video feed.                                                                  | 640           |
 | height                | The height (in pixels) of the live video feed.                                                                 | 480           |
-| doorbirdRelay         | The height (in pixels) of the live video feed.                                                                 | 1             |
+| doorbirdRelay         | relay to trigger, e.g. physical relay number or relay on an paired IP I/O DoorController.                      | 1             |
 
 ## Customization
 
